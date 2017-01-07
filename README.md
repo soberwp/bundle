@@ -68,12 +68,10 @@ The main purpose of themer is to provide template options that are developer fri
 
 #### Three functions are made available for templating:
 
-```html
-<?php
+```php
 use function Sober\Themer\template;
 use function Sober\Themer\template_e;
 use function Sober\Themer\template_debug;
-?>
 ```
 
 #### Function `template()`
@@ -84,7 +82,7 @@ template($config, $template)
 * Parameter `$template` can be omitted if the filename and template name in `templates.json` match.
 * Returns a config value from `templates.json`
 
-```html
+```html+php
 <!-- within index.php -->
 
 <?php if (template('show_introduction')) : ?> 
@@ -108,7 +106,7 @@ template_e($config, $output, $template)
 * Parameter `$template` can be omitted if the filename and template name in `templates.json` match.
 * Echo a config or custom value from `templates.json`
 
-```html
+```html+php
 <!-- within index.php -->
 
 <?php template_e('show_carousel', 'carousel'); ?>
