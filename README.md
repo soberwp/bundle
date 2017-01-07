@@ -93,7 +93,7 @@ if (template(['carousel_items', 5])) :
   // returns true if carousel_items is equal to 5
 endif;
 
-if (template('show_sidebar', 'single')) : ?> 
+if (template('show_sidebar', 'single')) :
   // returns true within index.php
 endif;
 ```
