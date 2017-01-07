@@ -82,20 +82,20 @@ template($config, $template)
 * Parameter `$template` can be omitted if the filename and template name in `templates.json` match.
 * Returns a config value from `templates.json`
 
-```html+php
-<!-- within index.php -->
+```php
+// within index.php
 
-<?php if (template('show_introduction')) : ?> 
-  <!-- returns true if value is not false or null -->
-<?php endif; ?>
+if (template('show_introduction')) :
+  // returns true if value is not false or null
+endif;
 
-<?php if (template(['carousel_items', 5])) : ?> 
-  <!-- returns true if carousel_items is equal to 5 -->
-<?php endif; ?>
+if (template(['carousel_items', 5])) :
+  // returns true if carousel_items is equal to 5
+endif;
 
-<?php if (template('show_sidebar', 'single')) : ?> 
-  <!-- returns true within index.php -->
-<?php endif; ?>
+if (template('show_sidebar', 'single')) : ?> 
+  // returns true within index.php
+endif;
 ```
 
 #### Function `template_e()`
@@ -106,17 +106,17 @@ template_e($config, $output, $template)
 * Parameter `$template` can be omitted if the filename and template name in `templates.json` match.
 * Echo a config or custom value from `templates.json`
 
-```html+php
-<!-- within index.php -->
+```php
+// within index.php
 
-<?php template_e('show_carousel', 'carousel'); ?>
-<!-- outputs "carousel" -->
+template_e('show_carousel', 'carousel');
+// outputs "carousel"
 
-<?php template_e(['carousel_items', 5], 'carousel-five'); ?>
-<!-- outputs "carousel-five" if carousel_items is equal to 5 -->
+template_e(['carousel_items', 5], 'carousel-five');
+// outputs "carousel-five" if carousel_items is equal to 5
 
-<?php template_e('show_sidebar', 'show-sidebar-class', 'single'); ?>
-<!-- outputs "show-sidebar-class" within index.php -->
+template_e('show_sidebar', 'show-sidebar-class', 'single');
+// outputs "show-sidebar-class" within index.php
 ```
 
 #### Function `template_debug()`
