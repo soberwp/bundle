@@ -1,0 +1,16 @@
+[
+  {
+    "template": "index",
+    "config": {
+      "show_introduction": true,
+      "show_carousel": true,
+      "carousel_items": 5
+    }
+  },
+  {
+    "template": "single",
+    "config": {
+      "show_sidebar": true
+    }
+  }
+]
