@@ -121,7 +121,7 @@ template_e('show_sidebar', 'show-sidebar-class', 'single');
 
 #### Function `template_debug()`
 ```php
-template_debug()
+template_debug();
 ```
 
 * For debugging purposes, outputs `template` and associated `config` values from `templates.json`.
