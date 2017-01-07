@@ -85,15 +85,15 @@ template($config, $template)
 ```php
 // within index.php
 
-if (template('show_introduction')) :
+if (template('show_introduction')):
   // returns true if value is not false or null
 endif;
 
-if (template(['carousel_items', 5])) :
+if (template(['carousel_items', 5])):
   // returns true if carousel_items is equal to 5
 endif;
 
-if (template('show_sidebar', 'single')) :
+if (template('show_sidebar', 'single')):
   // returns true within index.php
 endif;
 ```
