@@ -30,17 +30,15 @@ class Loader
     {
         foreach ($this->types as $this->type) {
             $this->file = (has_filter('sober/themer/' . $this->type . '/file') ?  apply_filters('sober/themer/' . $this->type . '/file', rtrim($this->type)) : get_stylesheet_directory() . '/' . $this->type . 's.json');
-            $this->load($this->file);
+            $this->load();
         }
     }
 
     /**
      * Load
      */
-    protected function load($file)
+    protected function load()
     {
-        $this->file = $file;
-
         if (!file_exists($this->file)) return;
         if (!$this->isJson()) return;
 
