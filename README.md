@@ -1,6 +1,6 @@
 # Themer
 
-Simple WordPress plugin for theme templating options and plugin activation using JSON files.
+Simple WordPress plugin to enable theme options for templating and plugin activation using JSON files.
 
 ## Installation
 
