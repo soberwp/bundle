@@ -14,7 +14,7 @@ $ wp plugin activate themer
 
 #### Manual:
 
-* Download the [zip file](https://github.com/soberwp/themer/archive.master.zip)
+* Download the [zip file](https://github.com/soberwp/themer/archive/master.zip)
 * Unzip to your sites plugin folder
 * Activate via WordPress
 
