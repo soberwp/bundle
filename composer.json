@@ -2,7 +2,7 @@
   "name": "soberwp/themer",
   "type": "wordpress-muplugin",
   "license": "MIT",
-  "description": "Simple WordPress plugin for themeing using JSON.",
+  "description": "WordPress plugin for themeing using JSON.",
   "homepage": "https://github.com/soberwp",
   "authors": [
     {
