@@ -1,8 +1,8 @@
 {
-  "name": "soberwp/themer",
+  "name": "soberwp/bundle",
   "type": "wordpress-muplugin",
   "license": "MIT",
-  "description": "WordPress plugin for themeing using JSON.",
+  "description": "WordPress plugin to enable plugin activation using a JSON, YAML or PHP file.",
   "homepage": "https://github.com/soberwp",
   "authors": [
     {
@@ -15,7 +15,7 @@
     "wordpress"
   ],
   "support": {
-    "issues": "https://github.com/soberwp/themer/issues"
+    "issues": "https://github.com/soberwp/bundle/issues"
   },
   "require": {
     "php": ">=5.4.0",
@@ -28,8 +28,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Sober\\Themer\\": "src/",
-      "Sober\\Themer\\Module\\": "src/Module/"
+      "Sober\\Bundle\\": "src/"
     }
   },
   "scripts": {

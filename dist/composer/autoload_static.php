@@ -13,8 +13,7 @@ class ComposerStaticInitc2eaa5efacf85b727e01692ca431bea9
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
-            'Sober\\Themer\\Module\\' => 20,
-            'Sober\\Themer\\' => 13,
+            'Sober\\Bundle\\' => 13,
         ),
         'N' => 
         array (
@@ -27,11 +26,7 @@ class ComposerStaticInitc2eaa5efacf85b727e01692ca431bea9
     );
 
     public static $prefixDirsPsr4 = array (
-        'Sober\\Themer\\Module\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/Module',
-        ),
-        'Sober\\Themer\\' => 
+        'Sober\\Bundle\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -134,12 +129,9 @@ class ComposerStaticInitc2eaa5efacf85b727e01692ca431bea9
         'Noodlehaus\\FileParser\\Php' => __DIR__ . '/..' . '/hassankhan/config/src/FileParser/Php.php',
         'Noodlehaus\\FileParser\\Xml' => __DIR__ . '/..' . '/hassankhan/config/src/FileParser/Xml.php',
         'Noodlehaus\\FileParser\\Yaml' => __DIR__ . '/..' . '/hassankhan/config/src/FileParser/Yaml.php',
-        'Sober\\Themer\\ConfigNoFile' => __DIR__ . '/../..' . '/src/ConfigNoFile.php',
-        'Sober\\Themer\\Instance' => __DIR__ . '/../..' . '/src/Instance.php',
-        'Sober\\Themer\\Loader' => __DIR__ . '/../..' . '/src/Loader.php',
-        'Sober\\Themer\\Module' => __DIR__ . '/../..' . '/src/Module.php',
-        'Sober\\Themer\\Module\\Plugin' => __DIR__ . '/../..' . '/src/Module/Plugin.php',
-        'Sober\\Themer\\Module\\Template' => __DIR__ . '/../..' . '/src/Module/Template.php',
+        'Sober\\Bundle\\Bundle' => __DIR__ . '/../..' . '/src/Bundle.php',
+        'Sober\\Bundle\\ConfigNoFile' => __DIR__ . '/../..' . '/src/ConfigNoFile.php',
+        'Sober\\Bundle\\Loader' => __DIR__ . '/../..' . '/src/Loader.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

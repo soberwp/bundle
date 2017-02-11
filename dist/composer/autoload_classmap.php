@@ -94,10 +94,7 @@ return array(
     'Noodlehaus\\FileParser\\Php' => $vendorDir . '/hassankhan/config/src/FileParser/Php.php',
     'Noodlehaus\\FileParser\\Xml' => $vendorDir . '/hassankhan/config/src/FileParser/Xml.php',
     'Noodlehaus\\FileParser\\Yaml' => $vendorDir . '/hassankhan/config/src/FileParser/Yaml.php',
-    'Sober\\Themer\\ConfigNoFile' => $baseDir . '/src/ConfigNoFile.php',
-    'Sober\\Themer\\Instance' => $baseDir . '/src/Instance.php',
-    'Sober\\Themer\\Loader' => $baseDir . '/src/Loader.php',
-    'Sober\\Themer\\Module' => $baseDir . '/src/Module.php',
-    'Sober\\Themer\\Module\\Plugin' => $baseDir . '/src/Module/Plugin.php',
-    'Sober\\Themer\\Module\\Template' => $baseDir . '/src/Module/Template.php',
+    'Sober\\Bundle\\Bundle' => $baseDir . '/src/Bundle.php',
+    'Sober\\Bundle\\ConfigNoFile' => $baseDir . '/src/ConfigNoFile.php',
+    'Sober\\Bundle\\Loader' => $baseDir . '/src/Loader.php',
 );

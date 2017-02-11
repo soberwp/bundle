@@ -1,37 +1,40 @@
 <?php
 
-namespace Sober\Themer;
+namespace Sober\Bundle;
 
 use Noodlehaus\Config;
-use Sober\Themer\ConfigNoFile;
-use Sober\Themer\Module\Template;
-use Sober\Themer\Module\Plugin;
+use Sober\Bundle\ConfigNoFile;
+use Sober\Bundle\Module\Plugin;
 
 class Loader
 {
-    // expose template configs for theming
-    public $templates = [];
-
     // protected
     protected $file;
-    protected $types = ['template', 'plugin'];
-    protected $type;
+    protected $defaultFile;
     protected $config;
 
     public function __construct()
     {
-        $this->getFiles();
+        $this->getDefaultFile();
+        $this->getFile()->load();
     }
 
     /**
-     * Get files
+     * Get file
      */
-    protected function getFiles()
+    protected function getFile()
     {
-        foreach ($this->types as $this->type) {
-            $this->file = (has_filter('sober/themer/' . $this->type . '/file') ?  apply_filters('sober/themer/' . $this->type . '/file', rtrim($this->type)) : get_stylesheet_directory() . '/' . $this->type . 's.json');
-            $this->load();
-        }
+        $this->file = (has_filter('sober/bundle/file') ? apply_filters('sober/bundle/file', $this->file) : $this->getDefaultFile());
+        return $this;
+    }
+
+    /**
+     * Get default file format
+     */
+    protected function getDefaultFile()
+    {
+        $result = glob(get_stylesheet_directory() . '/bundle.*');
+        return $result[0];
     }
 
     /**
@@ -40,20 +43,19 @@ class Loader
     protected function load()
     {
         if (!file_exists($this->file)) return;
-        if (!$this->isJson()) return;
-
+        if (!$this->isFileSupported()) return;
         $this->config = new Config($this->file);
-        ($this->isMultiple() ? $this->loadEach($this->type) : $this->route($this->config));
+        ($this->isMultiple() ? $this->loadEach() : $this->run($this->config));
     }
 
     /**
-     * Is JSON file
+     * Is file supported
      *
      * @return boolean
      */
-    protected function isJson()
+    protected function isFileSupported()
     {
-        return (pathinfo($this->file, PATHINFO_EXTENSION) === 'json');
+        return in_array(pathinfo($this->file, PATHINFO_EXTENSION), ['json', 'yaml', 'yml', 'php']);
     }
 
     /**
@@ -72,18 +74,15 @@ class Loader
     protected function loadEach()
     {   
         foreach ($this->config as $config) {
-            $this->route(new ConfigNoFile($config));
+            $this->run(new ConfigNoFile($config));
         }
     }
 
     /**
-     * Route to class
+     * Run
      */
-    protected function route($config)
-    {   
-        if ($this->type === 'template') {
-            $this->templates[] = new Template($config);
-        }
-        if ($this->type === 'plugin') (new Plugin($config))->run();
+    protected function run($config)
+    {
+        (new Bundle($config));
     }
 }

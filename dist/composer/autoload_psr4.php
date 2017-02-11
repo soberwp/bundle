@@ -6,8 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Sober\\Themer\\Module\\' => array($baseDir . '/src/Module'),
-    'Sober\\Themer\\' => array($baseDir . '/src'),
+    'Sober\\Bundle\\' => array($baseDir . '/src'),
     'Noodlehaus\\' => array($vendorDir . '/hassankhan/config/src'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
 );

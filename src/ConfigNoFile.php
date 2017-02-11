@@ -1,6 +1,6 @@
 <?php
 
-namespace Sober\Themer;
+namespace Sober\Bundle;
 
 use Noodlehaus\AbstractConfig;
 

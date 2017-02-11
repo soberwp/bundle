@@ -1,16 +1,28 @@
 <?php
 
-namespace Sober\Themer\Module;
+namespace Sober\Bundle;
 
-use Sober\Themer\Module;
+class Bundle
+{
+    protected $data;
 
-class Plugin extends Module
-{   
-    public function run()
+    public function __construct($data)
     {
+        $this->data = $data;
+
         if ($this->isDisabled()) return;
-        
+
         $this->config()->register();
+    }
+
+    /**
+     * Check to see if config has been disabled
+     *
+     * @return boolean
+     */
+    protected function isDisabled()
+    {
+        return (($this->data['active'] === false) ? true : false);
     }
 
     /**
