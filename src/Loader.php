@@ -8,7 +8,6 @@ use Sober\Bundle\Module\Plugin;
 
 class Loader
 {
-    // protected
     protected $file;
     protected $defaultFile;
     protected $config;
@@ -16,7 +15,8 @@ class Loader
     public function __construct()
     {
         $this->getDefaultFile();
-        $this->getFile()->load();
+        $this->getFile();
+        $this->load();
     }
 
     /**
@@ -25,7 +25,6 @@ class Loader
     protected function getFile()
     {
         $this->file = (has_filter('sober/bundle/file') ? apply_filters('sober/bundle/file', $this->file) : $this->getDefaultFile());
-        return $this;
     }
 
     /**

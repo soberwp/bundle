@@ -10,9 +10,12 @@ class Bundle
     {
         $this->data = $data;
 
-        if ($this->isDisabled()) return;
+        if ($this->isDisabled()) {
+            return;
+        }
 
-        $this->config()->register();
+        $this->config();
+        $this->register();
     }
 
     /**
@@ -39,7 +42,6 @@ class Bundle
             'parent_slug' => 'plugins.php',
             'is_automatic' => true
         ];
-        return $this;
     }
 
     /**
