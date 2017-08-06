@@ -14,7 +14,6 @@ class Loader
 
     public function __construct()
     {
-        $this->getDefaultFile();
         $this->getFile();
         $this->load();
     }
@@ -33,7 +32,9 @@ class Loader
     protected function getDefaultFile()
     {
         $result = glob(get_stylesheet_directory() . '/bundle.*');
-        return $result[0];
+        $result = empty($result) ? : $result[0];
+        
+        return $result;
     }
 
     /**
