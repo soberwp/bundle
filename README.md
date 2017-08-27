@@ -6,10 +6,17 @@ WordPress plugin to enable plugin activation using a JSON, YAML or PHP file.
 
 #### Composer:
 
-Recommended method; [Roots Bedrock](https://roots.io/bedrock/) and [WP-CLI](http://wp-cli.org/)
+Recommended method/s; 
+
+[Roots Bedrock](https://roots.io/bedrock/) and [WP-CLI](http://wp-cli.org/)
 ```shell
 $ composer require soberwp/bundle
 $ wp plugin activate bundle
+```
+
+[Roots Sage](https://roots.io/sage/)
+```shell
+$ composer require soberwp/bundle:1.0.1-p
 ```
 
 #### Manual:
