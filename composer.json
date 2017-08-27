@@ -1,6 +1,6 @@
 {
   "name": "soberwp/bundle",
-  "type": "wordpress-muplugin",
+  "type": "package",
   "license": "MIT",
   "description": "WordPress plugin to enable plugin activation using a JSON, YAML or PHP file.",
   "homepage": "https://github.com/soberwp",
@@ -29,7 +29,10 @@
   "autoload": {
     "psr-4": {
       "Sober\\Bundle\\": "src/"
-    }
+    },
+    "files": [
+      "bundle.php"
+    ]
   },
   "scripts": {
     "test": [
