@@ -16,7 +16,7 @@ $ wp plugin activate bundle
 
 [Roots Sage](https://roots.io/sage/)
 ```shell
-$ composer require soberwp/bundle:1.0.1-p
+$ composer require soberwp/bundle:1.0.2-p
 ```
 
 #### Manual:
@@ -115,7 +115,7 @@ You can read [tgmpa documentation](http://tgmpluginactivation.com/configuration/
 
 #### Composer:
 
-* Change the composer.json version to ^1.0.1**
+* Change the composer.json version to ^1.0.2**
 * Check [CHANGELOG.md](CHANGELOG.md) for any breaking changes before updating.
 
 ```shell
